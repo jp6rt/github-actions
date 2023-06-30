@@ -14,5 +14,15 @@ jobs:
           node-version: '16.x'
       - run: ls
       - run: npm ci
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: npm -v
+      - run: ls
 
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: npm -v
+      - run: ls
 
