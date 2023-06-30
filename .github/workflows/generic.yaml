@@ -15,12 +15,14 @@ jobs:
       - run: ls
       - run: npm ci
   lint:
+    needs: [install]
     runs-on: ubuntu-20.04
     steps:
       - run: npm -v
       - run: ls
 
   test:
+    needs: [lint]
     runs-on: ubuntu-20.04
     steps:
       - run: npm -v
